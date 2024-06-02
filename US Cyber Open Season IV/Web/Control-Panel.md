@@ -11,11 +11,11 @@ File : [Source_Code](https://github.com/salarsalimi/CTF/tree/main/US%20Cyber%20O
 
 After openning the dashboard we see it's a simple page that has 4 links each one making a request to same URL with a parameter
 
-![](../assets/Control_Panel_1.png)
+![](../assets/Control_Panel_1.PNG)
 
 For example when we open first link we are sending this parameter like bellow:
 
-![](../assets/Control_Panel_2.png)
+![](../assets/Control_Panel_2.PNG)
 
 
 
@@ -60,7 +60,7 @@ def index():
 We take a look at getoutput defenition in subprocces library to see how it works
 - it seems like it is executing our commands 
 
-![](../assets/Control_Panel_3.png)
+![](../assets/Control_Panel_3.PNG)
 
 So basically we have RCE but what command to execute ? 
 
@@ -83,4 +83,4 @@ So we must call this url
 We achive this with this url call :
 > https://uscybercombine-s4-control-panel.chals.io/?command=destroy_humans&arg=curl%20-s%20localhost:3000/shutdown
 
-![](../assets/Control_Panel_4.png)
+![](../assets/Control_Panel_4.PNG)
